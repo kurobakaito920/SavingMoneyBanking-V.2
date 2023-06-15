@@ -1,3 +1,4 @@
+import 'package:SVM_V2/View/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,19 +7,19 @@ class LoginPage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: hexToColor('#f3f3f3'),
+    return Container(
+      decoration: const BoxDecoration(
+        color: Color(0xFFF3F3F3),
+        image: DecorationImage(
+          image: AssetImage('images/background_login.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
         body:Stack(
           children:<Widget> [
-            Positioned.fill(
-              child: Image.asset(
-                'images/background_login.png',
-                fit: BoxFit.cover,
-              ),
-            ),
             Container(
-              color: Colors.transparent,
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -105,7 +106,7 @@ class LoginPage extends StatelessWidget {
               ), 
             ),
             Padding(
-              padding: EdgeInsets.only(top: 560, bottom: 18),
+              padding: EdgeInsets.only(top: 540, bottom: 18),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -140,8 +141,88 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children:<Widget> [
                 Padding(
-                  padding: EdgeInsets.only(right: 22.5, left: 22.5),
+                  padding: EdgeInsets.only(top: 560),
+                  child: Container(
+                    margin: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(width: 2, color: Colors.black38), 
+                    ),
+                    child: Image.asset(
+                      'images/google.png',
+                    ),
+                  ),
                 ),
+                Padding(
+                  padding: EdgeInsets.only(top: 560),
+                  child: Container(
+                    margin: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(width: 2, color: Colors.black38),
+                    ),
+                    child: Image.asset(
+                      'images/mail.png',
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 560),
+                  child: Container(
+                    margin: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100),
+                      border: Border.all(width: 2, color: Colors.black38),
+                    ),
+                    child: Image.asset(
+                      'images/telephone.png',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 700),
+                    child: GestureDetector(
+                      onTap: (){
+                        showModalBottomSheet<void>(
+                          context: context, 
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(25),
+                            ),
+                            side: BorderSide(
+                              color: Colors.black38,
+                              width: 2.0,
+                            ),
+                          ),
+                          builder: (BuildContext context){
+                            return RegisterPage();
+                          }
+                        );
+                      },
+                      child: const Text(
+                        'Chưa có tài khoản ?',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF587CD0),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ],
@@ -150,4 +231,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-

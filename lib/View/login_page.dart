@@ -1,3 +1,4 @@
+import 'package:SVM_V2/View/home_page.dart';
 import 'package:SVM_V2/View/register_page.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class LoginPage extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(top: 46.0, bottom: 14.0),
                       child: SizedBox(
-                        width: 228,
+                        width: 220,
                         height: 40,
                         child: TextField(
                           decoration: InputDecoration(
@@ -57,7 +58,7 @@ class LoginPage extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(bottom: 14),
                       child: SizedBox(
-                        width: 228,
+                        width: 220,
                         height: 40,
                         child: TextField(
                           obscureText: true,
@@ -89,7 +90,12 @@ class LoginPage extends StatelessWidget {
                       height: 41,
                       width: 179,
                       child: ElevatedButton(
-                        onPressed: (){}, 
+                        onPressed: (){
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(builder: (context) => const HomePage()),
+                          );
+                        }, 
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF1E70C3),
                         ),

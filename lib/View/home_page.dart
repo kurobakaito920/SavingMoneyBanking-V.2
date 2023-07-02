@@ -83,11 +83,145 @@ class _BottomNavigationMenu extends State<BottomNavigationMenu>{
                 ),
               ),
               Expanded(
-                flex: 4,
+                flex: 3,
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.start,
-                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 30),
+                      child: Text(
+                        'Dịch vụ khách hàng',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFFFFFFFF),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: GridView.count(
+                        primary: false,
+                        crossAxisCount: 3,
+                        padding: EdgeInsets.all(20),
+                        crossAxisSpacing: 5,
+                        mainAxisSpacing: 5,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'images/deposit.png',
+                                    height: 41,
+                                    width: 41,
+                                  ),
+                                  const Text(
+                                    'Nạp tiền',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'images/cash-withdrawal.png', 
+                                    height: 41,
+                                    width: 41,
+                                  ),
+                                  const Text(
+                                    'Rút tiền',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ],
+                              ), 
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'images/piggy-bank.png',
+                                    height: 41,
+                                    width: 41,
+                                  ),
+                                  const Text(
+                                    'Mở tiết kiệm',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){},
+                            child: Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'images/payroll.png',
+                                    height: 61,
+                                    width: 61,
+                                  ),
+                                  const Text(
+                                    'Chuyển tiền',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 30),
+                      child: Text(
+                        'Câu hỏi thường gặp',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xCC587CD0),
+                        ),
+                      ),
+                    ),
                     Expanded(
                       child: GridView.count(
                         primary: false,
@@ -96,51 +230,72 @@ class _BottomNavigationMenu extends State<BottomNavigationMenu>{
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
                         children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                  'images/deposit.png',
-                                  height: 51,
-                                  width: 51,
-                                ),
-                                const Text(
-                                  'Nạp tiền',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFFFFFFFF),
+                          GestureDetector(
+                            onTap: (){},
+                            child: SizedBox(
+                              height: 25,
+                              width: 25,
+                              child: Scaffold(
+                                backgroundColor: Color(0xCC587CD0),
+                                body: Container(
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    'Cách nạp tiền?',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
                                   ),
                                 ),
-                              ],
-                            )
+                              ),
+                            ),
                           ),
-                          Container(
-                            padding: EdgeInsets.all(8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Image.asset(
-                                  'images/cash-withdrawal.png', 
-                                  height: 51,
-                                  width: 51,
-                                ),
-                                const Text(
-                                  'Rút tiền',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFFFFFFFF),
+                          GestureDetector(
+                            onTap: (){},
+                            child: SizedBox(
+                              height: 25,
+                              width: 25,
+                              child: Scaffold(
+                                backgroundColor: Color(0xCC587CD0),
+                                body: Container(
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    'Cách rút tiền?',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
                                   ),
                                 ),
-                              ],
-                            ), 
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){},
+                            child: SizedBox(
+                              height: 25,
+                              width: 25,
+                              child: Scaffold(
+                                backgroundColor: Color(0xCC587CD0),
+                                body: Container(
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    'Cách mở sổ?',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -177,7 +332,7 @@ class _BottomNavigationMenu extends State<BottomNavigationMenu>{
             setState(() {
               _selectIndex = index;
             });
-          }
+          },
         ), 
       ),
     );
